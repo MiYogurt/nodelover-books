@@ -1,0 +1,583 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.7 关系嵌套 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4模型查询.html" />
+    
+    
+    <link rel="prev" href="3.6多态多对多.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.写在前面的话.html">
+            
+                <a href="1.写在前面的话.html">
+            
+                    
+                    写在前面的话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.搭建环境.html">
+            
+                <a href="2.搭建环境.html">
+            
+                    
+                    第一章 搭建环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第二章 模型定义
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.sequelize 实例变量.html">
+            
+                <a href="3.sequelize 实例变量.html">
+            
+                    
+                    2.1 实例变量方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="4.定义一个模型.html">
+            
+                <a href="4.定义一个模型.html">
+            
+                    
+                    2.2 定义一个模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="5.模型字段类型.html">
+            
+                <a href="5.模型字段类型.html">
+            
+                    
+                    2.3 模型字段类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="6.导入与配置.html">
+            
+                <a href="6.导入与配置.html">
+            
+                    
+                    2.3 导入与配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3模型关系.html">
+            
+                <a href="3模型关系.html">
+            
+                    
+                    第三章 模型关系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="3.1属于.html">
+            
+                <a href="3.1属于.html">
+            
+                    
+                    3.1 属于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="3.2包含.html">
+            
+                <a href="3.2包含.html">
+            
+                    
+                    3.2 包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3.3一对多.html">
+            
+                <a href="3.3一对多.html">
+            
+                    
+                    3.3 一对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="3.4多对多.html">
+            
+                <a href="3.4多对多.html">
+            
+                    
+                    3.4 多对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="3.5多态一对多.html">
+            
+                <a href="3.5多态一对多.html">
+            
+                    
+                    3.5 多态一对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="3.6多态多对多.html">
+            
+                <a href="3.6多态多对多.html">
+            
+                    
+                    3.6 多态多对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.7" data-path="3.7关系嵌套.html">
+            
+                <a href="3.7关系嵌套.html">
+            
+                    
+                    3.7 关系嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4模型查询.html">
+            
+                <a href="4模型查询.html">
+            
+                    
+                    第四章 模型查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5查询范围.html">
+            
+                <a href="5查询范围.html">
+            
+                    
+                    第五章 查询范围 Scope (预定义查询条件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="6生命周期函数.html">
+            
+                <a href="6生命周期函数.html">
+            
+                    
+                    第六章 生命周期函数 Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="7migrate.html">
+            
+                <a href="7migrate.html">
+            
+                    
+                    第七章 数据库迁移 Migrate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="8tabel2model.html">
+            
+                <a href="8tabel2model.html">
+            
+                    
+                    第八章 根据 Table 生成 Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.7 关系嵌套</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5173;&#x7CFB;&#x5D4C;&#x5957;">&#x5173;&#x7CFB;&#x5D4C;&#x5957;</h1>
+<p>&#x5728;&#x4E4B;&#x524D;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6709;&#x4F9D;&#x8D56;&#x5176;&#x4ED6;&#x6A21;&#x578B;&#x7684;&#x6A21;&#x578B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x63D0;&#x524D;&#x628A;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x578B;&#x7ED9;&#x5EFA;&#x7ACB;&#x597D;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x6709;&#x90A3;&#x4E48;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x4E00;&#x4E2A; create &#x91CC;&#x9762;&#x628A;&#x5176;&#x4ED6;&#x7684;&#x4F9D;&#x8D56;&#x6A21;&#x578B;&#x4E00;&#x8D77;&#x65B0;&#x5EFA;&#x51FA;&#x6765;&#x5462;&#xFF1F;</p>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x5C31;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5751;&#xFF08;&#x5173;&#x4E8E;&#x547D;&#x540D;&#xFF09;&#xFF0C;&#x8BA9;&#x6211;&#x8C03;&#x8BD5;&#x7684;&#x5934;&#x76AE;&#x53D1;&#x9EBB;&#x3002;</p>
+<h3 id="book-&#x4E0E;-user-&#x7684;-belongs-&#x5173;&#x7CFB;">Book &#x4E0E; User &#x7684; belongs &#x5173;&#x7CFB;</h3>
+<h4 id="1-&#x4FDD;&#x5B58;&#x5173;&#x7CFB;">1. &#x4FDD;&#x5B58;&#x5173;&#x7CFB;</h4>
+<p>&#x6765;&#x5230; book.ts &#xFF0C; &#x9996;&#x5148;&#x4FDD;&#x5B58;&#x4E00;&#x4E0B; this.belongsTo &#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5728; d.ts &#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#x4E2D;&#x5199;&#x7684;&#x8FD4;&#x56DE;&#x7684; void&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x662F;&#x4F60;&#x53EF;&#x4EE5;log &#x4E00;&#x4E0B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B; source target option &#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-ts">(Book as <span class="hljs-built_in">any</span>).associate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>: <span class="hljs-keyword">typeof</span> Book, models: <span class="hljs-built_in">any</span></span>)</span>{
+   (Book as <span class="hljs-built_in">any</span>).User = <span class="hljs-keyword">this</span>.belongsTo(models.User);
+}
+</code></pre>
+<h4 id="2&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x63D0;&#x793A;">2.&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x63D0;&#x793A;</h4>
+<pre><code class="lang-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> BookAttributes {
+  status: <span class="hljs-string">&quot;inSale&quot;</span> | <span class="hljs-string">&quot;noSale&quot;</span>;
+  description: <span class="hljs-built_in">string</span>;
+  title: <span class="hljs-built_in">string</span>;
+  author: <span class="hljs-built_in">string</span>;
+
+  User?: UserAttributes | Sequelize.BelongsToGetAssociationMixin&lt;UserInstance&gt;;
+}
+</code></pre>
+<blockquote>
+<p>&#x7279;&#x522B;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x662F; User&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x662F; User&#xFF1F; &#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x503C;&#x8981;&#x8DDF;&#x4F60; define &#x4F20;&#x5165;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;
+&#x7B14;&#x8005;&#x4E00;&#x76F4;&#x8BA4;&#x4E3A;&#x662F;&#x5C0F;&#x5199;&#xFF0C;&#x81EA;&#x5DF1;&#x5199;&#x4E86;&#x5F88;&#x591A;&#x4F8B;&#x5B50;&#x9A8C;&#x8BC1;&#x5C31;&#x662F;&#x6CA1;&#x6709;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x82B1;&#x4E86;2&#x5929;&#x65F6;&#x95F4;&#x53BB;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x91CC;&#x7684; User &#x8DDF;&#x5B9E;&#x4F8B;&#x7684; User &#x91CD;&#x540D;&#x4E86;&#x6240;&#x6709;&#x6211;&#x4EEC;&#x8981;&#x7528;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x6765;&#x4FDD;&#x6301;&#x7236;&#x7C7B;&#x63A5;&#x53E3;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x3002;</p>
+<h3 id="user-&#x4E0E;-tag-&#x7684;-belongstomany">User &#x4E0E; Tag &#x7684; belongsToMany</h3>
+<p>belongsToMany&#x3001;hasMany&#x3001;hasOne &#x90FD;&#x662F;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
+<h4 id="1&#x4FDD;&#x5B58;&#x5173;&#x7CFB;">1.&#x4FDD;&#x5B58;&#x5173;&#x7CFB;</h4>
+<p>&#x6765;&#x5230; user.ts</p>
+<pre><code class="lang-ts">(User as <span class="hljs-built_in">any</span>).associate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>: <span class="hljs-keyword">typeof</span> User,models</span>)</span>{
+   <span class="hljs-comment">// this.hasOne(models.Book);</span>
+   (User as <span class="hljs-built_in">any</span>).Book = <span class="hljs-keyword">this</span>.hasMany(models.Book);
+   (User as <span class="hljs-built_in">any</span>).Tag = <span class="hljs-keyword">this</span>.belongsToMany(models.Tag, { through: <span class="hljs-string">&apos;user_tag&apos;</span>});
+}
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x7684; <code>this.hasMany</code> &#x8DDF;&#x4E4B;&#x524D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5173;&#x7CFB;&#xFF0C;&#x56E0;&#x4E3A;&#x6B64;&#x65F6;&#x7684;&#x4E3B;&#x4F53;&#x662F; User&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x8BA9; User.create &#x53EF;&#x4EE5;&#x65B0;&#x5EFA; Book &#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5373;&#xFF1A;&#xFF08;&#x5B9E;&#x9A8C;&#x8BF7;&#x6839;&#x636E;&#x540E;&#x9762;&#x5185;&#x5BB9;&#x81EA;&#x884C;&#x52A0;&#x4E0A;&#x4EE3;&#x7801;&#x63D0;&#x793A;&#xFF09;</p>
+<pre><code class="lang-ts">User.create({
+    .....,
+    Book: {
+        .....,
+    }
+}, { include: [User.Book] })
+</code></pre>
+<h4 id="2&#x4EE3;&#x7801;&#x63D0;&#x793A;">2.&#x4EE3;&#x7801;&#x63D0;&#x793A;</h4>
+<pre><code class="lang-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserAttributes {
+  email: <span class="hljs-built_in">string</span>;
+  name: <span class="hljs-built_in">string</span>;
+  Tags?: TagAttributes[];
+}
+</code></pre>
+<p>&#x5728; Tag &#x6A21;&#x578B;&#x91CC;&#x9762;&#x7684;define&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; <code>Tag</code>&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x662F; Tags&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x591A;&#x7684;&#x4E00;&#x65B9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x4E0E;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x6CA1;&#x6709;&#x51B2;&#x7A81;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x505A;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x7684;&#x3002;</p>
+<h3 id="&#x9A8C;&#x8BC1;">&#x9A8C;&#x8BC1;</h3>
+<p>index.ts</p>
+<pre><code class="lang-ts">await Book.create({
+ author: <span class="hljs-string">&apos;213&apos;</span>,
+ description: <span class="hljs-string">&apos;213&apos;</span>,
+ status: <span class="hljs-string">&quot;inSale&quot;</span>,
+ title: <span class="hljs-string">&apos;12322&apos;</span>,
+ User: {
+   email: <span class="hljs-string">&apos;1733996866@qq.com&apos;</span>,
+   name: <span class="hljs-string">&apos;some&apos;</span>,
+   Tags: [
+     {name: <span class="hljs-string">&apos;123&apos;</span>},
+     {name: <span class="hljs-string">&apos;22&apos;</span>}
+   ]
+ }
+},{
+ include: [{
+   association: (Book as <span class="hljs-built_in">any</span>).User,
+   include: [(User as <span class="hljs-built_in">any</span>).Tag]
+ }]
+});
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x4FBF;&#x53EF;&#x770B;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x8BB0;&#x5F97;&#x540C;&#x6B65;&#x6570;&#x636E;&#x5E93;&#x8868;&#x54E6;&#x3002;</p>
+<p>&#x5047;&#x5982;&#x53EA;&#x6709;&#x4E00;&#x9879;&#x76F8;&#x5173;&#x8054;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5199;&#x5373;&#x53EF;&#x3002;&#x5047;&#x5982;&#x662F;&#x5D4C;&#x5957;&#xFF0C;&#x50CF;&#x4E0A;&#x9762;&#x8FD9;&#x6837;&#x5199;&#x5373;&#x53EF;&#xFF0C;&#x53EF;&#x4EE5;&#x4E00;&#x76F4;&#x5D4C;&#x5957;&#x3002;</p>
+<pre><code class="lang-ts">include: [(User as <span class="hljs-built_in">any</span>).Tag]
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.6多态多对多.html" class="navigation navigation-prev " aria-label="Previous page: 3.6 多态多对多">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4模型查询.html" class="navigation navigation-next " aria-label="Next page: 第四章 模型查询">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.7 关系嵌套","level":"1.5.7","depth":2,"next":{"title":"第四章 模型查询","level":"1.6","depth":1,"path":"document/4模型查询.md","ref":"./document/4模型查询.md","articles":[]},"previous":{"title":"3.6 多态多对多","level":"1.5.6","depth":2,"path":"document/3.6多态多对多.md","ref":"./document/3.6多态多对多.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"document/3.7关系嵌套.md","mtime":"2017-06-28T03:27:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-28T08:29:37.466Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

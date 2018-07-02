@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第六章 生命周期函数 Hook · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7migrate.html" />
+    
+    
+    <link rel="prev" href="5查询范围.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.写在前面的话.html">
+            
+                <a href="1.写在前面的话.html">
+            
+                    
+                    写在前面的话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.搭建环境.html">
+            
+                <a href="2.搭建环境.html">
+            
+                    
+                    第一章 搭建环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    第二章 模型定义
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3.sequelize 实例变量.html">
+            
+                <a href="3.sequelize 实例变量.html">
+            
+                    
+                    2.1 实例变量方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="4.定义一个模型.html">
+            
+                <a href="4.定义一个模型.html">
+            
+                    
+                    2.2 定义一个模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="5.模型字段类型.html">
+            
+                <a href="5.模型字段类型.html">
+            
+                    
+                    2.3 模型字段类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="6.导入与配置.html">
+            
+                <a href="6.导入与配置.html">
+            
+                    
+                    2.3 导入与配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="3模型关系.html">
+            
+                <a href="3模型关系.html">
+            
+                    
+                    第三章 模型关系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="3.1属于.html">
+            
+                <a href="3.1属于.html">
+            
+                    
+                    3.1 属于
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="3.2包含.html">
+            
+                <a href="3.2包含.html">
+            
+                    
+                    3.2 包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="3.3一对多.html">
+            
+                <a href="3.3一对多.html">
+            
+                    
+                    3.3 一对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="3.4多对多.html">
+            
+                <a href="3.4多对多.html">
+            
+                    
+                    3.4 多对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="3.5多态一对多.html">
+            
+                <a href="3.5多态一对多.html">
+            
+                    
+                    3.5 多态一对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="3.6多态多对多.html">
+            
+                <a href="3.6多态多对多.html">
+            
+                    
+                    3.6 多态多对多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="3.7关系嵌套.html">
+            
+                <a href="3.7关系嵌套.html">
+            
+                    
+                    3.7 关系嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="4模型查询.html">
+            
+                <a href="4模型查询.html">
+            
+                    
+                    第四章 模型查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="5查询范围.html">
+            
+                <a href="5查询范围.html">
+            
+                    
+                    第五章 查询范围 Scope (预定义查询条件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="6生命周期函数.html">
+            
+                <a href="6生命周期函数.html">
+            
+                    
+                    第六章 生命周期函数 Hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="7migrate.html">
+            
+                <a href="7migrate.html">
+            
+                    
+                    第七章 数据库迁移 Migrate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="8tabel2model.html">
+            
+                <a href="8tabel2model.html">
+            
+                    
+                    第八章 根据 Table 生成 Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第六章 生命周期函数 Hook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;">&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</h1>
+<p>&#x6709;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5728;&#x5B58;&#x50A8;&#x4E4B;&#x524D;&#x5E72;&#x70B9;&#x4EC0;&#x4E48;&#xFF0C;&#x6BD4;&#x5982;&#x628A;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#x8FDB;&#x884C; Hash &#x4E00;&#x4E0B;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E86;&#x3002;</p>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;&#x6709;&#x54EA;&#x4E9B;&#x79CD;&#x7C7B;&#xFF1F;</p>
+<p>&#x652F;&#x6301;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-ts">(<span class="hljs-number">1</span>)
+  beforeBulkCreate(instances, options)
+  beforeBulkDestroy(options)
+  beforeBulkUpdate(options)
+(<span class="hljs-number">2</span>)
+  beforeValidate(instance, options)
+(-)
+  validate
+(<span class="hljs-number">3</span>)
+  afterValidate(instance, options)
+  - or -
+  validationFailed(instance, options, error)
+(<span class="hljs-number">4</span>)
+  beforeCreate(instance, options)
+  beforeDestroy(instance, options)
+  beforeUpdate(instance, options)
+  beforeSave(instance, options)
+  beforeUpsert(values, options)
+(-)
+  create
+  destroy
+  update
+(<span class="hljs-number">5</span>)
+  afterCreate(instance, options)
+  afterDestroy(instance, options)
+  afterUpdate(instance, options)
+  afterSave(instance, options)
+  afterUpsert(created, options)
+(<span class="hljs-number">6</span>)
+  afterBulkCreate(instances, options)
+  afterBulkDestroy(options)
+  afterBulkUpdate(options)
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x5468;&#x671F;&#x51FD;&#x6570;&#x5206;&#x4E3A;&#x5168;&#x5C40;&#x7684;&#x4E0E;&#x6A21;&#x578B;&#x7EA7;&#x522B;&#x7684;&#x3002;</p>
+<h3 id="&#x5168;&#x5C40;&#x7EA7;&#x522B;">&#x5168;&#x5C40;&#x7EA7;&#x522B;</h3>
+<pre><code class="lang-ts"><span class="hljs-keyword">const</span> sequelize = <span class="hljs-keyword">new</span> Sequelize(..., {
+    define: {
+        hooks: {
+            beforeCreate: () =&gt; {
+                <span class="hljs-comment">// Do stuff</span>
+            }
+        }
+    }
+});
+</code></pre>
+<h3 id="&#x6A21;&#x578B;&#x7EA7;&#x522B;">&#x6A21;&#x578B;&#x7EA7;&#x522B;</h3>
+<pre><code class="lang-ts"><span class="hljs-keyword">const</span> Project = sequelize.define(<span class="hljs-string">&apos;project&apos;</span>, {}, {
+    hooks: {
+        beforeCreate: () =&gt; {
+            <span class="hljs-comment">// Do other stuff</span>
+        }
+    }
+});
+</code></pre>
+<h3 id="&#x5B9A;&#x4E49;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;">&#x5B9A;&#x4E49;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;</h3>
+<p>1.options</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">const</span> Project = sequelize.define(<span class="hljs-string">&apos;project&apos;</span>, {}, {
+    hooks: {
+        beforeCreate: () =&gt; {
+            <span class="hljs-comment">// Do other stuff</span>
+        }
+    }
+});
+
+<span class="hljs-keyword">const</span> sequelize = <span class="hljs-keyword">new</span> Sequelize(..., {
+    define: {
+        hooks: {
+            beforeCreate: () =&gt; {
+                <span class="hljs-comment">// Do stuff</span>
+            }
+        }
+    }
+});
+</code></pre>
+<p>2.&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-ts">sequelize.afterValidate(<span class="hljs-string">&apos;xxx&apos;</span>, () =&gt; {....})
+User.afterValidate(<span class="hljs-string">&apos;myHookAfter&apos;</span>, (user, options) =&gt; {
+  user.username = <span class="hljs-string">&apos;Toni&apos;</span>;
+});
+</code></pre>
+<p>3.&#x8C03;&#x7528; addHook</p>
+<pre><code class="lang-ts">sequelize.addHook(<span class="hljs-string">&apos;xxx&apos;</span>, () =&gt; {....})
+User.addHook(<span class="hljs-string">&apos;afterValidate&apos;</span>, <span class="hljs-string">&apos;notifyUsers&apos;</span>, () =&gt; {....})
+</code></pre>
+<h3 id="&#x547D;&#x540D;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;">&#x547D;&#x540D;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</h3>
+<p>&#x53D6;&#x4E00;&#x4E2A;&#x53EB; notifyUsers &#x7684;&#x540D;&#x5B57;</p>
+<pre><code class="lang-ts">User.afterValidate(<span class="hljs-string">&apos;myHookAfter&apos;</span>, (user, options) =&gt; {
+  user.username = <span class="hljs-string">&apos;Toni&apos;</span>;
+});
+
+User.addHook(<span class="hljs-string">&apos;afterValidate&apos;</span>, <span class="hljs-string">&apos;notifyUsers&apos;</span>, () =&gt; {....})
+</code></pre>
+<h3 id="&#x79FB;&#x9664;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;">&#x79FB;&#x9664;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</h3>
+<p>&#x53EA;&#x6709;&#x88AB;&#x547D;&#x540D;&#x4E86;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x624D;&#x53EF;&#x79FB;&#x9664;</p>
+<pre><code class="lang-ts">Book.removeHook(<span class="hljs-string">&apos;afterValidate&apos;</span>, <span class="hljs-string">&apos;notifyUsers&apos;</span>);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5查询范围.html" class="navigation navigation-prev " aria-label="Previous page: 第五章 查询范围 Scope (预定义查询条件)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7migrate.html" class="navigation navigation-next " aria-label="Next page: 第七章 数据库迁移 Migrate">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第六章 生命周期函数 Hook","level":"1.8","depth":1,"next":{"title":"第七章 数据库迁移 Migrate","level":"1.9","depth":1,"path":"document/7migrate.md","ref":"./document/7migrate.md","articles":[]},"previous":{"title":"第五章 查询范围 Scope (预定义查询条件)","level":"1.7","depth":1,"path":"document/5查询范围.md","ref":"./document/5查询范围.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"document/6生命周期函数.md","mtime":"2017-06-28T06:37:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-28T08:29:37.466Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
