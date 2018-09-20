@@ -259,7 +259,7 @@ var req = require('./request');
 var res = require('./response');
 ```
 
-以及一下这些导出。
+以及以下这些导出。
 
 ```js
 exports.Route = Route;
@@ -650,7 +650,7 @@ methods.forEach(function(method){
 });
 ```
 
-methods 的源码其实非常简单，就是 `http.METHODS` 里面支持的方法全部转成小写。给 app 里面添加所有 Node 支持的 http 方法函数，假如是 get 且只有一个参数，说明调用的是 app.set 拿到配置项，否则显通过 this._router.route 设定 path ，再调用 route 对应的方法。
+methods 的源码其实非常简单，就是 `http.METHODS` 里面支持的方法全部转成小写。给 app 里面添加所有 Node 支持的 http 方法函数，假如是 get 且只有一个参数，说明调用的是 app.set 拿到配置项，否则通过 this._router.route 设定 path ，再调用 route 对应的方法。
 
 类似于这样( _ 以下划线开头的说明都是私有方法，我们不应该直接调用，这里只是为了说明)：
 
@@ -764,7 +764,7 @@ app.render = function render(name, options, callback) {
 
 这是为了支持第二个参数为回调的时候，让 opts 默认为 `{}`。接下来还 merge 了几个选项而已，而这个 View 就是导入的 view.js 模块了，暂时先放一放。缓存选项打开的话，就保存到缓存 cache 选项上面去，假如缓存上面有的话，就直接拿不用再 new 了。假如路径啥的出错了，通过 done(err) 交给回调就是了，这个回调 done 是我们自己传递的。
 
-这一段的代码缓存比较清楚，是不是我们又 gei 到了一个技能呢？
+这一段的代码缓存比较清楚，是不是我们又 get 到了一个技能呢？
 
 tryRender 就是用 try/catch 包裹了一下 render
 
@@ -936,7 +936,7 @@ if (req.cookies) {
       : [secret]
 ```
 
-secret 不存在或者是一个数组，就返回 secret 或者空数组，否则用数组包裹一下。
+secret 不存在或者是一个数组，就返回 空数组 或者 secret，否则用数组包裹一下。
 
 
 ```
@@ -1116,7 +1116,7 @@ var proto = module.exports = function(options) {
 
 ##### 2.6.1.3 param 参数方法
 
-在阅读此方法之前，大家可以先看一下 param 的 API 文档，看一下它的是如何工作的，这样便于我们理解函数的功能，进而理解函数的逻辑。[点我跳转](http://www.expressjs.com.cn/4x/api.html#router.param)
+在阅读此方法之前，大家可以先看一下 param 的 API 文档，看一下它是如何工作的，这样便于我们理解函数的功能，进而理解函数的逻辑。[点我跳转](http://www.expressjs.com.cn/4x/api.html#router.param)
 
 查看一个函数，我们以理解他的功能为优先。
 
@@ -1451,7 +1451,7 @@ proto.route = function route(path) {
 };
 ```
 
-##### 2.6.1.9 从 API 来看一看俩种路由区别。
+##### 2.6.1.9 从 API 来看一看两种路由区别。
 
 app.route 代理的 router.route ，以这样的形式返回 route，这样可以以链式调用的方式指定相同 path 处理不同的方法，这样我们就非常容易实现 RESTful API 的路由模式。
 
@@ -1897,7 +1897,7 @@ server.listen(3000);
 
 ##### 2.8.1.3 其他
 
-request 多数为操作一些 header 头字段，对于 HTTP header 里面的一些字段 [点我了解更多信息](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers)。request 里面大多数的方法都是代理 jstttp 里面包的功能，关于 jshttp [请点击这里](https://jshttp.github.io/)，这里都是一些基于 node http API 封装的一些方法。
+request 多数为操作一些 header 头字段，对于 HTTP header 里面的一些字段 [点我了解更多信息](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers)。request 里面大多数的方法都是代理 jshttp 里面包的功能，关于 jshttp [请点击这里](https://jshttp.github.io/)，这里都是一些基于 node http API 封装的一些方法。
 
 response 提供了一些常用的响应函数。根据不同的响应方式，设置不同的 content-type 以及一些特殊字段，返回内容即可。
 
