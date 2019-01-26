@@ -22,7 +22,7 @@ for (let i of list) {
 
 # 模块导入与导出
 
-我们知道，基本上任何语言的都有相应管理代码导包的机制，不如 java 的 package，php 的 include 和 require 等。
+我们知道，基本上任何语言的都有相应管理代码导包的机制，比如 java 的 package，php 的 include 和 require 等。
 
 而我们的 js 当可以运行在后端的时候，所以必须要有一种模块加载机制，于是就有了 `cjs` 规范。
 
