@@ -76,3 +76,5 @@
     * [8.拖拽效果](web/拖拽效果.md)
     * [9.跟随页面滚动效果](web/跟随页面滚动效果.md)
     * [10.鼠标右键菜单效果](web/鼠标右键菜单效果.md)
+
+* [Electron 飞行指南](https://miyogurt.github.io/electron-flyer/1.html)
